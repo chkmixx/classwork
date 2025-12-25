@@ -1,0 +1,41 @@
+public class Main{
+public static void main(String[] args) {
+
+    System.out.println("===Gym Menegment System===");
+
+    Member member1=new Member(1,"Sayazhan",17,"Standard");
+    Member member2=new Member(2,"Tomiris",16,"Premium");
+
+    Trainer trainer1 = new Trainer(17, "Albina", "Yoga", 4);
+    Trainer trainer2 = new Trainer(13, "Akerke", "Pilates", 2);
+
+
+    WorkoutSession workoutSession1=new WorkoutSession(7,"Sayazhan","Albina",13);
+
+    System.out.println("--- MEMBERS ---");
+    System.out.println(member1);
+    System.out.println(member2);
+
+    System.out.println("\n--- TRAINERS ---");
+    System.out.println(trainer1);
+    System.out.println(trainer2);
+
+    System.out.println("\n--- WORKOUT SESSION ---");
+    System.out.println(workoutSession1);
+
+    // Test methods
+    System.out.println("\n--- TESTING METHODS ---");
+    System.out.println("Is Sayazhan active? " + member1.isActive());
+    member2.upgradeMembershipType();
+    System.out.println("Tomiris upgraded: " + member2);
+
+    System.out.println("Is Albina experienced? " + trainer1.isExperienced());
+    System.out.println("Can Akerke teach Pilates? " + trainer2.canTeach("Pilates"));
+
+    workoutSession1.extendSession(19);
+    System.out.println("Extended session: " + workoutSession1);
+    System.out.println("Is long session? " + workoutSession1.isLongSession());
+
+    System.out.println("\n=== Program Complete ===");
+}
+}
