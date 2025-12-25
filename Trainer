@@ -1,0 +1,60 @@
+public class Trainer {
+
+    private int trainerId;
+    private String name;
+    private String specialization;
+    private int experienceYears;
+
+    public Trainer(int trainerId,String name,String specialization,int experienceYears){
+        this.trainerId=trainerId;
+        this.name=name;
+        this.specialization=specialization;
+        this.experienceYears=experienceYears;
+    }
+
+    private int experienceYears() {
+        return 0;
+    }
+
+
+    public int getTrainerId(){
+        return trainerId;
+    }
+    public String getName(){
+        return name;
+    }
+    public String getSpecialization(){
+        return specialization;
+    }
+
+    public int getExperienceYears() {
+        return getExperienceYears();
+    }
+    public void setTrainerId(int trainerId){
+        this.trainerId=trainerId;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setSpecialization(String specialization) {
+        this.specialization = specialization;
+    }
+
+    public void setExperienceYears(int experienceYears) {
+        this.experienceYears = experienceYears;
+    }
+
+    public boolean isExperienced(){
+        return experienceYears>=6;
+    }
+
+    public boolean canTeach(String type){
+        return specialization.equalsIgnoreCase(type);
+    }
+    @Override
+    public String toString(){
+        return "Trainer{id="+trainerId+",name'"+name+" ',specialization='"+specialization+" ',experienceYears="+experienceYears+"}";
+    }
+}
